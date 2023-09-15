@@ -62,10 +62,8 @@
             <img class="bg-img3" src="/assets/img/images/hill.png" alt="">
             <div class="gradient-content"></div>
             <section class="index-contents">
-                <div class="block" id="block1" data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000">
-                    <div data-aos-delay="300" data-aos="fade-right">
+                <div class="block" id="block_1" >
+                    <div class='block_1'>
                         <h2 class="block_title">What level of  hiker are you?</h2>
                         <span class="block_count">01</span>
                         <span class="subtitle">Get started</span>
@@ -73,11 +71,11 @@
 
                         <a href="" class="block_more">read more</a>
                     </div>
-                    <img data-aos-delay="500" data-aos="fade-left" class="image" src="/assets/img/images/img_picture1.png" alt="">
+                    <img class="image_1" src="/assets/img/images/img_picture1.png" alt="">
                 </div>
 
                 <div class="block" id="block2">
-                    <div data-aos-delay="300" data-aos="fade-left">
+                    <div class='block_2'>
                         <h2 class="block_title">Picking the right Hiking Gear!</h2>
                         <span class="block_count">02</span>
                         <span class="subtitle">Hiking Essentials</span>
@@ -87,11 +85,11 @@
                         <a href="" class="block_more">read more</a>
                     </div>
 
-                    <img data-aos-delay="500" data-aos="fade-right" class="image" src="/assets/img/images/img_picture2.png" alt="">
+                    <img   class="image_2" src="/assets/img/images/img_picture2.png" alt="">
                 </div>
 
                 <div class="block" id="block3">
-                    <div data-aos-delay="300" data-aos="fade-right">
+                    <div class='block_3'>
                         <h2 class="block_title">where you go is the key</h2>
                         <span class="block_count">03</span>
                         <span class="subtitle">Get started</span>
@@ -100,7 +98,7 @@
                         <a href="" class="block_more">read more</a>
                     </div>
 
-                    <img data-aos-delay="500" data-aos="fade-left" class="image" src="/assets/img/images/img_picture3.png" alt="">
+                    <img class="image_3" src="/assets/img/images/img_picture3.png" alt="">
                 </div>
 
             
@@ -109,14 +107,14 @@
 
             <!-- Footer -->
         <footer class="footer">
-            <div class="footer_left" data-aos-delay="300" data-aos="fade-right">
+            <div class="footer_left" >
                 <span class="h1">MNTN</span>
                 <p class="footer_txt">
                     Get out there & discover your next slope, mountain & destination!
                 </p>
                 <div class="footer_copy">Copyright 2019 MNTN, Inc. Terms & Privacy</div>
             </div>
-            <div class="footer_right" data-aos-delay="500" data-aos="fade-up">
+            <div class="footer_right">
                 <div class="footer_nav">
                     <h2>More on The Blog</h2>
                     <nav>
@@ -147,15 +145,11 @@
 
     <!-- Script -->
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 
-    <script>
-        $('.quick a').on('click', function(){
-            $(this).parents('.quick').find('a').removeClass('active');
-            $(this).addClass('active')
-        });
-        AOS.init();
-    </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/assets/js/contents.js"></script>
 </html>

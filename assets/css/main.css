@@ -234,7 +234,7 @@ body {
 .gradient-content {
   background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0b1d26 61.38%);
   height: 700px;
-  margin-top: -100px;
+  margin-top: -280px;
 }
 
 .index-contents {
@@ -248,7 +248,7 @@ body {
 .block {
   display: flex;
   padding-left: 150px;
-  gap: 114px;
+  gap: 214px;
   position: relative;
 }
 .block > div {
@@ -315,7 +315,7 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
-  margin: 200px auto 120px;
+  margin: 200px auto 0;
   width: 1462px;
 }
 .footer_left {
