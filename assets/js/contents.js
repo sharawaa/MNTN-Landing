@@ -1,98 +1,34 @@
-const block_1= document.querySelector('.block_1')
-const block_2= document.querySelector('.block_2')
-const block_3= document.querySelector('.block_3')
+function scrollTriggerFunction(element, x, y, start, end) {
+    gsap.to(element, {
+      x,
+      y,
+      duration: 3,
+      scrollTrigger: {
+        trigger: element,
+        start,
+        end,
+        scrub: 4,
+        // markers:true
+      },
+    });
+  }
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
 
-const img_1= document.querySelector('.image_1')
-const img_2= document.querySelector('.image_2')
-const img_3= document.querySelector('.image_3')
-
-gsap.registerPlugin(ScrollTrigger);
-
-// block 1
-gsap.to(block_1,{
-    x:100, 
-    duration:3, 
-    scrollTrigger:{
-        trigger:block_1,
-        start:"top 80%",
-        end:"top 30%",
-        scrub:4,
-        // markers:true
-    }
-})
-gsap.to(img_1,{
-    x:-100, 
-    duration:3, 
-    scrollTrigger:{
-        trigger:img_1,
-        start:"top 80%",
-        end:"top 30%",
-        scrub:4,
-        // markers:true
-    }
-})
-// block 2
-gsap.to(block_2,{
-    x:-100, 
-    duration:3, 
-    scrollTrigger:{
-        trigger:block_2,
-        start:"top 80%",
-        end:"top 30%",
-        scrub:4,
-        // markers:true
-    }
-})
-gsap.to(img_2,{
-    x:100, 
-    duration:3, 
-    scrollTrigger:{
-        trigger:img_2,
-        start:"top 80%",
-        end:"top 30%",
-        scrub:4,
-        // markers:true
-    }
-})
-
-// block 3
-gsap.to(block_3,{
-    x:100, 
-    duration:3, 
-    scrollTrigger:{
-        trigger:block_3,
-        start:"top 80%",
-        end:"top 30%",
-        scrub:4,
-        // markers:true
-    }
-})
-gsap.to(img_3,{
-    x:-100, 
-    duration:3, 
-    scrollTrigger:{
-        trigger:img_3,
-        start:"top 80%",
-        end:"top 30%",
-        scrub:4,
-        // markers:true
-    }
-})
-gsap.to(".footer_right",{y:-100, duration:3,
-scrollTrigger:{
-    trigger:'.footer_right',
-// markers:true,
-start:"top 80%",
-end:'top 30%',
-scrub:4,
-
-}})
-gsap.to(".footer_left",{y:-100, x:100,  duration:3,
-    scrollTrigger:{
-        trigger:'.footer_right',
-    // markers:true,
-    start:"top 80%",
-    end:'top 30%',
-    scrub:4,
-    
-    }})
+  const animations = [
+    { element: document.querySelector('.block_1'), x: 50, y: 0, start: 'top 80%', end: 'top 30%' },
+    { element: document.querySelector('.image_1'), x: -50, y: 0, start: 'top 80%', end: 'top 30%' },
+    { element: document.querySelector('.block_2'), x: -50, y: 0, start: 'top 80%', end: 'top 30%' },
+    { element: document.querySelector('.image_2'), x: 50, y: 0, start: 'top 80%', end: 'top 30%' },
+    { element: document.querySelector('.block_3'), x: 50, y: 0, start: 'top 80%', end: 'top 30%' },
+    { element: document.querySelector('.image_3'), x: -50, y: 0, start: 'top 80%', end: 'top 30%' },
+  ];
+  
+  animations.forEach((animation) => {
+    scrollTriggerFunction(animation.element, animation.x, animation.y, animation.start, animation.end);
+  });
+  
+  scrollTriggerFunction(document.querySelector('.footer_right'), 0, -50, 'top 80%', 'top 30%');
+  scrollTriggerFunction(document.querySelector('.footer_left'), 50, -50, 'top 80%', 'top 30%');
+  
