@@ -89,7 +89,8 @@ body {
   gap: 40px;
   color: var(--white);
 }
-.gnb a {
+.gnb li {
+  cursor: pointer;;
 }
 .btn-account {
   display: flex;
@@ -118,6 +119,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  z-index: 100;
 }
 .sns_title {
   writing-mode: vertical-rl;
@@ -138,7 +140,6 @@ body {
   height: 24px;
   background: url("/assets/img/icons/twitter.png") no-repeat;
 }
-
 .quick {
   position: fixed;
   right: 80px;
@@ -231,21 +232,18 @@ body {
   z-index: -1;
   background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0b1d26);
 }
-
 .gradient-content {
   background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0b1d26 61.38%);
   height: 700px;
   margin-top: -280px;
+  z-index: 100;
 }
-
 .index-contents {
   display: grid;
   gap: 200px;
   margin: -460px auto 0;
-
-  width: 1462px;
+  width: 90%;
 }
-
 .block {
   display: flex;
   padding-left: 150px;
@@ -253,11 +251,12 @@ body {
   position: relative;
 }
 .block > div {
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 27px;
+  width: 30% !important;
 }
 
 .block:nth-of-type(even) {
@@ -316,8 +315,8 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
-  margin: 200px auto 0;
-  width: 1462px;
+  margin: 200px auto 30px;
+  width: 80%;
 }
 .footer_left {
   display: grid;
