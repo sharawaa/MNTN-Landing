@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const scrollPercentage = (scrollTop / scrollableHeight) * 100;
-    console.log('Scroll Percentage:', scrollPercentage, '%');
+  
 
     if (scrollPercentage < 20) {
         ac1.style.borderColor = '#ffffff';
@@ -29,40 +29,55 @@ window.addEventListener('scroll', () => {
         ac4.style.borderColor = '#ffffff80';
         ac5.style.borderColor = '#ffffff';
     }
+    console.log(window.innerWidth);
+
+
 });
 
 
 function scrollTriggerFunction(element, x, y, start, end) {
-    gsap.to(element, {
-      x,
-      y,
-      duration: 3,
-      scrollTrigger: {
-        trigger: element,
-        start,
-        end,
-        scrub: 4,
-        // markers:true
-      },
-    });
-  }
-  
-  gsap.registerPlugin(ScrollTrigger);
-  
+  gsap.from(element, {
+    x,
+    y,
+    opacity:0,
 
-  const animations = [
-    { element: document.querySelector('.block_1'), x: 50, y: 0, start: 'top 80%', end: 'top 30%' },
-    { element: document.querySelector('.image_1'), x: -50, y: 0, start: 'top 80%', end: 'top 30%' },
-    { element: document.querySelector('.block_2'), x: -50, y: 0, start: 'top 80%', end: 'top 30%' },
-    { element: document.querySelector('.image_2'), x: 50, y: 0, start: 'top 80%', end: 'top 30%' },
-    { element: document.querySelector('.block_3'), x: 50, y: 0, start: 'top 80%', end: 'top 30%' },
-    { element: document.querySelector('.image_3'), x: -50, y: 0, start: 'top 80%', end: 'top 30%' },
-    {element:document.querySelector('.footer_right'), x:0, y:-50, start:'top 80%', end:'top 30%'},
-    {element:document.querySelector('.footer_left'), x:100, y:-50, start:'top 80%', end:'top 30%'}
-  ];
-  
+    scrollTrigger: {
+      trigger: element,
+      start,
+      end,
+      scrub: 4,
+      // markers:true,
+      opacity:1
+    },
+    
+   
+  });
+}
+
+gsap.registerPlugin(ScrollTrigger);
+
+  const smallScreen = () => window.innerWidth < 821; 
+
+
+const animations = [
+  { element: document.querySelector('.block_1'), x: smallScreen() ? 100 : -200, y:  0, start: 'top 80%', end: 'top 30%' },
+  { element: document.querySelector('.image_1'), x: smallScreen() ? 0 : 200, y: 0, start: 'top 80%', end: 'top 30%' },
+  { element: document.querySelector('.block_2'), x: smallScreen() ? 30 : 500, y:  0, start: 'top 80%', end: 'top 30%' },
+  { element: document.querySelector('.image_2'), x: smallScreen() ? 0 : -200, y: 0, start: 'top 80%', end: 'top 30%' },
+  { element: document.querySelector('.block_3'), x: smallScreen() ? 60 : -200, y: 0, start: 'top 80%', end: 'top 30%' },
+  { element: document.querySelector('.image_3'), x: smallScreen() ? 0 : 200, y: 0, start: 'top 80%', end: 'top 30%' },
+  { element: document.querySelector('.footer_right'), x: 0, y: smallScreen() ? 10 : 50, start: 'top 80%', end: 'top 30%' },
+  { element: document.querySelector('.footer_left'), x: smallScreen() ? 0 : 100, y: smallScreen() ? 0 : 50, start: 'top bottom', end: 'center 10%' }
+];
+
+animations.forEach((animation) => {
+  scrollTriggerFunction(animation.element, animation.x, animation.y, animation.start, animation.end);
+});
+
+window.addEventListener("resize", () => {
   animations.forEach((animation) => {
     scrollTriggerFunction(animation.element, animation.x, animation.y, animation.start, animation.end);
   });
+});
 
   

@@ -155,7 +155,7 @@ body {
   font-size: 18px;
   line-height: 60px;
   color: var(--white);
-  border-right: 3px solid var(--white-5);
+  border-right: 4px solid var(--white-5);
 }
 .quick a.active {
   border-color: var(--white);
@@ -316,7 +316,7 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
-  margin: 200px auto 30px;
+  margin: 200px auto 100px;
   width: 80%;
 }
 .footer_left {

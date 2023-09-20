@@ -9,15 +9,15 @@
 @media screen and (max-width: 1300.98px) {
 
 }
-@media screen and (max-width: 820.98px) {
+@media screen and (max-width: 821px) {
       .bg-img1{
         margin-top: 150px;
       }
       .bg-img2{
-        top: 510px;
+        top: 480px;
       }
       .bg-img3{
-        top:810px;
+        top:710px;
       }
       .index-contents{
         width: 100%;
@@ -26,14 +26,30 @@
         width: 100%;
       }
   .gradient-content {margin-top: -650px ;}
+
+  .visual_copy .maintitle{
+    font-size: 68px;
+    line-height: 70px;
+  }
+
   .footer_right {gap: 20px;}
 
       .block > div{
         position: absolute;
-        width: 80% !important;
+        width: 70% !important;
         margin-top: 200px;
         z-index: 100;
+        margin-left: 30px !important;
+        margin-bottom: 30px !important;
       }
+      .index-contents{
+        gap: 100px ;
+        margin: -160px auto 0;
+        width: 100%;
+      }
+      .image_1{height: 500px !important;}
+      .image_2{height: 500px !important;}
+      .image_3{height: 500px !important;}
 }
 @media screen and (max-width: 483px) {
 .header{
@@ -88,7 +104,7 @@
   /*content  */
 
   .index-contents{
-    gap: 20px ;
+    gap: 100px ;
     margin: -160px auto 0;
     width: 100%;
   }
@@ -116,12 +132,17 @@
     margin: auto;
   }
   .block{gap: 10px; width: 100%;}
+  .block_count{
+    color: rgba(255, 255, 255, 0.703);
+    margin-left: 300px;
+  }
 
   .footer{
-    margin-top: 100px !important;
+    margin-top: 300px !important;
     width: 80%;
     margin: auto;
     flex-direction: column;
   }
   .footer_right{flex-direction: column; gap: 10px;}
+
 }
