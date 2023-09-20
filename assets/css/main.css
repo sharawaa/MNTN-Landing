@@ -244,6 +244,7 @@ body {
   gap: 200px;
   margin: -460px auto 0;
   width: 90%;
+  max-width: 1462px;
 }
 .block {
   display: flex;
@@ -318,6 +319,7 @@ body {
   justify-content: space-between;
   margin: 200px auto 100px;
   width: 80%;
+  max-width: 1462px;
 }
 .footer_left {
   display: grid;
